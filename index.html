@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Figma</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="sticky-header">
+      <img class="sticky-header__content" src="sticky-header-content.svg" alt="" />
+      <button class="sticky-header__button sticky-header__button--inicio" type="button" data-target="#page-1" aria-label="Ir al inicio"></button>
+      <button class="sticky-header__button sticky-header__button--funcion" type="button" data-target="#page-6" aria-label="Ir a funcion"></button>
+      <button class="sticky-header__button sticky-header__button--caja" type="button" data-target="#page-5" aria-label="Ir a caja"></button>
+      <button class="sticky-header__button sticky-header__button--app" type="button" data-target="#page-11" aria-label="Ir a app"></button>
+    </div>
+
+    <main class="figma-pages" aria-label="Paginas del proyecto">
+      <section class="figma-page" id="page-1" aria-label="Pagina 1">
+        <img src="desktoppage1.svg" alt="Pagina 1" />
+        <img class="desktop1-appear-image" src="desktop1-appear-image.png" alt="" aria-hidden="true" />
+      </section>
+
+      <section class="figma-page" id="page-2" aria-label="Pagina 2">
+        <img src="desktoppage2.svg" alt="Pagina 2" />
+        <img class="desktop2-replacement desktop2-replacement--left" src="desktop2-hover-replacements.png" alt="" aria-hidden="true" />
+        <img class="desktop2-replacement desktop2-replacement--center" src="desktop2-hover-replacements.png" alt="" aria-hidden="true" />
+        <img class="desktop2-replacement desktop2-replacement--right" src="desktop2-hover-replacements.png" alt="" aria-hidden="true" />
+        <button class="desktop2-hover-target desktop2-hover-target--left" type="button" data-replacement="left" aria-label="Ver impresion desde celular"></button>
+        <button class="desktop2-hover-target desktop2-hover-target--center" type="button" data-replacement="center" aria-label="Ver edicion de fotos"></button>
+        <button class="desktop2-hover-target desktop2-hover-target--right" type="button" data-replacement="right" aria-label="Ver conexion inalambrica"></button>
+      </section>
+
+      <section class="figma-page" id="page-4" aria-label="Pagina 4">
+        <img src="desktoppage4.svg" alt="Pagina 4" />
+        <img class="desktop4-appear-image" src="desktop4-appear-image.png" alt="" aria-hidden="true" />
+      </section>
+
+      <section class="figma-page" id="page-5" aria-label="Pagina 5">
+        <img src="desktoppage5.svg" alt="Pagina 5" />
+        <img class="desktop5-reveal-image desktop5-reveal-image--lines" src="desktop5-reveal-lines.png" alt="" aria-hidden="true" />
+        <img class="desktop5-reveal-image desktop5-reveal-image--main" src="desktop5-reveal-main.png" alt="" aria-hidden="true" />
+      </section>
+
+      <section class="figma-page" id="page-6" aria-label="Pagina 6">
+        <img src="desktoppage6.svg" alt="Pagina 6" />
+        <img class="desktop6-hover-vector desktop6-hover-vector--left" src="desktop6-hover-vectors.png" alt="" aria-hidden="true" />
+        <img class="desktop6-hover-vector desktop6-hover-vector--center" src="desktop6-hover-vectors.png" alt="" aria-hidden="true" />
+        <img class="desktop6-hover-vector desktop6-hover-vector--right" src="desktop6-hover-vectors.png" alt="" aria-hidden="true" />
+        <button class="desktop6-hover-target desktop6-hover-target--left" type="button" data-vector="left" aria-label="Expandir vector izquierdo"></button>
+        <button class="desktop6-hover-target desktop6-hover-target--center" type="button" data-vector="center" aria-label="Expandir vector central"></button>
+        <button class="desktop6-hover-target desktop6-hover-target--right" type="button" data-vector="right" aria-label="Expandir vector derecho"></button>
+      </section>
+
+      <section class="figma-page" id="page-7" aria-label="Pagina 7">
+        <img src="desktoppage7.svg" alt="Pagina 7" />
+      </section>
+
+      <section class="figma-page" id="page-8" aria-label="Pagina 8">
+        <img src="desktoppage8.svg" alt="Pagina 8" />
+        <div class="desktop8-carousel" aria-hidden="true">
+          <img class="desktop8-carousel-slide" src="desktop8-carousel-slide-1.png" alt="" />
+          <img class="desktop8-carousel-slide" src="desktop8-carousel-slide-2.png" alt="" />
+          <img class="desktop8-carousel-slide" src="desktop8-carousel-slide-3.png" alt="" />
+        </div>
+        <img class="desktop8-carousel-prev-button-image" src="desktop8-carousel-prev-button.png" alt="" aria-hidden="true" />
+        <img class="desktop8-carousel-button-image" src="desktop8-carousel-button.png" alt="" aria-hidden="true" />
+        <button class="desktop8-carousel-button desktop8-carousel-button--prev" type="button" data-direction="-1" aria-label="Ver imagen anterior"></button>
+        <button class="desktop8-carousel-button desktop8-carousel-button--next" type="button" data-direction="1" aria-label="Ver siguiente imagen"></button>
+      </section>
+
+      <section class="figma-page" id="page-10" aria-label="Pagina 10">
+        <img src="desktoppage10.svg" alt="Pagina 10" />
+        <img class="desktop10-front" src="desktop10-front.png" alt="" aria-hidden="true" />
+        <img class="desktop10-buttons desktop10-buttons--left" src="desktop10-buttons.png" alt="" aria-hidden="true" />
+        <img class="desktop10-buttons desktop10-buttons--center" src="desktop10-buttons.png" alt="" aria-hidden="true" />
+        <img class="desktop10-buttons desktop10-buttons--right" src="desktop10-buttons.png" alt="" aria-hidden="true" />
+        <img class="desktop10-details desktop10-details--left" src="desktop10-details.png" alt="" aria-hidden="true" />
+        <img class="desktop10-details desktop10-details--center" src="desktop10-details.png" alt="" aria-hidden="true" />
+        <img class="desktop10-details desktop10-details--right" src="desktop10-details.png" alt="" aria-hidden="true" />
+        <img class="desktop10-close-buttons desktop10-close-buttons--left" src="desktop10-close-buttons.png" alt="" aria-hidden="true" />
+        <img class="desktop10-close-buttons desktop10-close-buttons--center" src="desktop10-close-buttons.png" alt="" aria-hidden="true" />
+        <img class="desktop10-close-buttons desktop10-close-buttons--right" src="desktop10-close-buttons.png" alt="" aria-hidden="true" />
+        <button class="desktop9-card-button desktop9-card-button--left" type="button" data-card="left" aria-label="Cambiar tarjeta izquierda"></button>
+        <button class="desktop9-card-button desktop9-card-button--center" type="button" data-card="center" aria-label="Cambiar tarjeta central"></button>
+        <button class="desktop9-card-button desktop9-card-button--right" type="button" data-card="right" aria-label="Cambiar tarjeta derecha"></button>
+        <button class="desktop10-close-button desktop10-close-button--left" type="button" data-card="left" aria-label="Cerrar tarjeta izquierda"></button>
+        <button class="desktop10-close-button desktop10-close-button--center" type="button" data-card="center" aria-label="Cerrar tarjeta central"></button>
+        <button class="desktop10-close-button desktop10-close-button--right" type="button" data-card="right" aria-label="Cerrar tarjeta derecha"></button>
+      </section>
+
+      <section class="figma-page" id="page-11" aria-label="Pagina 11">
+        <img src="desktoppage11.svg" alt="Pagina 11" />
+        <img class="desktop11-overlay-image" src="desktop11-overlay-image.png" alt="" aria-hidden="true" />
+        <div class="desktop11-carousel" aria-hidden="true">
+          <img class="desktop11-carousel-slide is-active" src="desktop11-carousel-slide-1.png" alt="" />
+          <img class="desktop11-carousel-slide" src="desktop11-carousel-slide-2.png" alt="" />
+          <img class="desktop11-carousel-slide" src="desktop11-carousel-slide-3.png" alt="" />
+        </div>
+        <button class="desktop11-carousel-button desktop11-carousel-button--prev" type="button" data-direction="-1" aria-label="Imagen anterior"></button>
+        <button class="desktop11-carousel-button desktop11-carousel-button--next" type="button" data-direction="1" aria-label="Imagen siguiente"></button>
+      </section>
+
+      <section class="figma-page" id="page-12" aria-label="Pagina 12">
+        <img src="desktoppage12.svg" alt="Pagina 12" />
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

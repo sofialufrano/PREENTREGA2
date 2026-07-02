@@ -1,0 +1,689 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #000;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.sticky-header {
+  position: fixed;
+  top: 16px;
+  left: 8.7109375vw;
+  z-index: 20;
+  width: 82.578125vw;
+  height: 3.984375vw;
+  min-height: 28px;
+  max-height: 51px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-14px);
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.sticky-header.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.sticky-header__content {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sticky-header__button {
+  position: absolute;
+  top: 22%;
+  height: 56%;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  appearance: none;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+  font-size: 0;
+  line-height: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sticky-header__button--inicio {
+  left: 35.8%;
+  width: 7.2%;
+}
+
+.sticky-header__button--funcion {
+  left: 61.3%;
+  width: 9.8%;
+}
+
+.sticky-header__button--caja {
+  left: 74.2%;
+  width: 5.5%;
+}
+
+.sticky-header__button--app {
+  left: 84.6%;
+  width: 6.7%;
+}
+
+.figma-pages {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.figma-page {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+#page-1 {
+  aspect-ratio: 1280 / 738;
+}
+
+.desktop1-appear-image,
+.desktop4-appear-image,
+.desktop11-overlay-image,
+.desktop11-carousel {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(14px);
+  pointer-events: none;
+  transition: opacity 900ms ease, transform 900ms ease;
+}
+
+#page-1.is-revealed .desktop1-appear-image,
+#page-4.is-revealed .desktop4-appear-image,
+#page-11.is-revealed .desktop11-overlay-image,
+#page-11.is-revealed .desktop11-carousel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#page-2 {
+  aspect-ratio: 1280 / 316;
+}
+
+.desktop2-replacement {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.desktop2-replacement.is-visible {
+  opacity: 1;
+}
+
+.desktop2-replacement--left {
+  clip-path: inset(16.455696% 68.59375% 15.189873% 11.640625%);
+}
+
+.desktop2-replacement--center {
+  clip-path: inset(16.455696% 39.375% 15.189873% 41.484375%);
+}
+
+.desktop2-replacement--right {
+  clip-path: inset(16.455696% 10% 15.189873% 69.6875%);
+}
+
+.desktop2-hover-target {
+  position: absolute;
+  top: 16.455696%;
+  z-index: 3;
+  height: 68.35443%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.desktop2-hover-target--left {
+  left: 11.640625%;
+  width: 19.765625%;
+}
+
+.desktop2-hover-target--center {
+  left: 41.484375%;
+  width: 19.140625%;
+}
+
+.desktop2-hover-target--right {
+  left: 69.6875%;
+  width: 20.3125%;
+}
+
+#page-4 {
+  aspect-ratio: 1280 / 895;
+}
+
+#page-5 {
+  aspect-ratio: 1280 / 771;
+}
+
+.desktop5-reveal-image {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  clip-path: inset(100% 0 0 0);
+  pointer-events: none;
+  transition: clip-path 1800ms ease, opacity 900ms ease;
+}
+
+.desktop5-reveal-image--lines {
+  z-index: 2;
+}
+
+.desktop5-reveal-image--main {
+  z-index: 3;
+}
+
+#page-5.is-revealed .desktop5-reveal-image {
+  opacity: 1;
+  clip-path: inset(0 0 0 0);
+}
+
+#page-6 {
+  aspect-ratio: 1280 / 524;
+}
+
+.desktop6-hover-vector {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 1;
+  pointer-events: none;
+  transform: scale(1);
+  transition: transform 180ms ease;
+}
+
+.desktop6-hover-vector.is-hovered {
+  transform: scale(1.02);
+}
+
+.desktop6-hover-vector--left {
+  clip-path: inset(30% 67% 28% 10%);
+  transform-origin: 21.5% 51%;
+}
+
+.desktop6-hover-vector--center {
+  clip-path: inset(30% 38% 28% 38%);
+  transform-origin: 50% 48%;
+}
+
+.desktop6-hover-vector--right {
+  clip-path: inset(30% 9% 28% 67%);
+  transform-origin: 79% 51%;
+}
+
+.desktop6-hover-target {
+  position: absolute;
+  top: 30%;
+  z-index: 3;
+  height: 42%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.desktop6-hover-target--left {
+  left: 10%;
+  width: 23%;
+}
+
+.desktop6-hover-target--center {
+  left: 38%;
+  width: 24%;
+}
+
+.desktop6-hover-target--right {
+  left: 67%;
+  width: 24%;
+}
+
+#page-7 {
+  aspect-ratio: 1280 / 426;
+}
+
+#page-8 {
+  aspect-ratio: 1280 / 709;
+}
+
+.desktop8-carousel,
+.desktop8-carousel-slide,
+.desktop8-carousel-prev-button-image,
+.desktop8-carousel-button-image {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.desktop8-carousel {
+  z-index: 2;
+  overflow: hidden;
+}
+
+.desktop8-carousel-slide {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 160ms ease, transform 360ms ease;
+}
+
+.desktop8-carousel-slide.is-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.desktop8-carousel-slide.is-prev {
+  opacity: 1;
+  transform: translateX(-100%);
+}
+
+.desktop8-carousel-prev-button-image,
+.desktop8-carousel-button-image {
+  z-index: 3;
+}
+
+.desktop8-carousel-button {
+  position: absolute;
+  z-index: 4;
+  width: 8%;
+  height: 15%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.desktop8-carousel-button--prev {
+  left: 13%;
+  top: 42%;
+}
+
+.desktop8-carousel-button--next {
+  left: 81%;
+  top: 42%;
+}
+
+#page-10 {
+  aspect-ratio: 1280 / 1080;
+}
+
+.desktop10-front,
+.desktop10-buttons,
+.desktop10-details,
+.desktop10-close-buttons {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.desktop10-front {
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 900ms ease, transform 900ms ease;
+}
+
+#page-10.is-revealed .desktop10-front {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.desktop10-buttons {
+  z-index: 4;
+  opacity: 0;
+  transition: opacity 900ms ease;
+}
+
+#page-10.is-revealed .desktop10-buttons {
+  opacity: 1;
+}
+
+#page-10.is-left-open .desktop10-buttons--left,
+#page-10.is-center-open .desktop10-buttons--center,
+#page-10.is-right-open .desktop10-buttons--right {
+  opacity: 0;
+}
+
+.desktop10-buttons--left {
+  clip-path: inset(68% 66% 18% 24%);
+}
+
+.desktop10-buttons--center {
+  clip-path: inset(68% 38% 18% 52%);
+}
+
+.desktop10-buttons--right {
+  clip-path: inset(68% 7% 18% 81%);
+}
+
+.desktop10-details {
+  z-index: 3;
+  opacity: 0;
+  clip-path: inset(100% var(--desktop10-card-right) var(--desktop10-card-bottom) var(--desktop10-card-left));
+  transition: clip-path 320ms ease, opacity 180ms ease;
+}
+
+.desktop10-details--left {
+  --desktop10-card-top: 39%;
+  --desktop10-card-right: 65%;
+  --desktop10-card-bottom: 20%;
+  --desktop10-card-left: 9%;
+}
+
+.desktop10-details--center {
+  --desktop10-card-top: 39%;
+  --desktop10-card-right: 37%;
+  --desktop10-card-bottom: 20%;
+  --desktop10-card-left: 37%;
+}
+
+.desktop10-details--right {
+  --desktop10-card-top: 39%;
+  --desktop10-card-right: 9%;
+  --desktop10-card-bottom: 20%;
+  --desktop10-card-left: 65%;
+}
+
+#page-10.is-left-open .desktop10-details--left,
+#page-10.is-center-open .desktop10-details--center,
+#page-10.is-right-open .desktop10-details--right {
+  z-index: 5;
+  opacity: 1;
+  clip-path: inset(var(--desktop10-card-top) var(--desktop10-card-right) var(--desktop10-card-bottom) var(--desktop10-card-left));
+}
+
+.desktop10-close-buttons {
+  z-index: 6;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+#page-10.is-left-open .desktop10-close-buttons--left,
+#page-10.is-center-open .desktop10-close-buttons--center,
+#page-10.is-right-open .desktop10-close-buttons--right {
+  opacity: 1;
+}
+
+.desktop10-close-buttons--left {
+  clip-path: inset(68% 66% 18% 24%);
+}
+
+.desktop10-close-buttons--center {
+  clip-path: inset(68% 38% 18% 52%);
+}
+
+.desktop10-close-buttons--right {
+  clip-path: inset(68% 7% 18% 81%);
+}
+
+.desktop9-card-button,
+.desktop10-close-button {
+  position: absolute;
+  top: 69%;
+  width: 7%;
+  height: 9%;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  appearance: none;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+  font-size: 0;
+  line-height: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.desktop9-card-button {
+  z-index: 6;
+}
+
+#page-10.is-left-open .desktop9-card-button--left,
+#page-10.is-center-open .desktop9-card-button--center,
+#page-10.is-right-open .desktop9-card-button--right {
+  pointer-events: none;
+}
+
+.desktop10-close-button {
+  z-index: 7;
+  pointer-events: none;
+}
+
+#page-10.is-left-open .desktop10-close-button--left,
+#page-10.is-center-open .desktop10-close-button--center,
+#page-10.is-right-open .desktop10-close-button--right {
+  pointer-events: auto;
+}
+
+.desktop9-card-button--left {
+  left: 26.5%;
+}
+
+.desktop9-card-button--center {
+  left: 54.3%;
+}
+
+.desktop9-card-button--right {
+  left: 82.5%;
+}
+
+.desktop10-close-button--left {
+  left: 26.5%;
+}
+
+.desktop10-close-button--center {
+  left: 54.3%;
+}
+
+.desktop10-close-button--right {
+  left: 82.5%;
+}
+
+#page-11 {
+  aspect-ratio: 1280 / 1180;
+}
+
+.desktop11-carousel {
+  overflow: hidden;
+}
+
+.desktop11-overlay-image {
+  z-index: 2;
+}
+
+.desktop11-carousel {
+  z-index: 3;
+}
+
+.desktop11-carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(4%);
+  transition: opacity 180ms ease, transform 360ms ease;
+}
+
+.desktop11-carousel.is-moving-right .desktop11-carousel-slide {
+  transform: translateX(-4%);
+}
+
+.desktop11-carousel.is-moving-left .desktop11-carousel-slide {
+  transform: translateX(4%);
+}
+
+.desktop11-carousel-slide.is-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.desktop11-carousel.is-moving-right .desktop11-carousel-slide.is-active {
+  animation: desktop11-enter-from-left 360ms ease both;
+}
+
+.desktop11-carousel.is-moving-left .desktop11-carousel-slide.is-active {
+  animation: desktop11-enter-from-right 360ms ease both;
+}
+
+.desktop11-carousel-slide.is-exit-left {
+  opacity: 1;
+  animation: desktop11-exit-to-left 360ms ease both;
+}
+
+.desktop11-carousel-slide.is-exit-right {
+  opacity: 1;
+  animation: desktop11-exit-to-right 360ms ease both;
+}
+
+@keyframes desktop11-enter-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-4%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes desktop11-enter-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(4%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes desktop11-exit-to-left {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-4%);
+  }
+}
+
+@keyframes desktop11-exit-to-right {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(4%);
+  }
+}
+
+.desktop11-carousel-button {
+  position: absolute;
+  top: 71.9%;
+  z-index: 5;
+  width: 4.4%;
+  height: 4.8%;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  appearance: none;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+  font-size: 0;
+  line-height: 0;
+}
+
+.desktop11-carousel-button--prev {
+  left: 33.4%;
+}
+
+.desktop11-carousel-button--next {
+  left: 61.5%;
+}
+
+#page-12 {
+  aspect-ratio: 1280 / 316;
+}
+
+.figma-page img,
+.figma-page svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .sticky-header {
+    top: 10px;
+    left: 4vw;
+    width: 92vw;
+    height: clamp(30px, 8vw, 44px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sticky-header,
+  .desktop1-appear-image,
+  .desktop4-appear-image,
+  .desktop11-overlay-image,
+  .desktop11-carousel,
+  .desktop11-carousel-slide,
+  .desktop5-reveal-image,
+  .desktop6-hover-vector,
+  .desktop8-carousel-slide,
+  .desktop10-front,
+  .desktop10-buttons,
+  .desktop10-details,
+  .desktop10-close-buttons,
+  .desktop2-replacement {
+    animation: none;
+    transition: none;
+  }
+
+  .desktop1-appear-image,
+  .desktop4-appear-image,
+  .desktop10-front,
+  .desktop10-buttons,
+  .desktop10-details,
+  .desktop10-close-buttons,
+  .desktop11-overlay-image,
+  .desktop11-carousel,
+  .desktop5-reveal-image {
+    opacity: 1;
+    transform: none;
+    clip-path: inset(0 0 0 0);
+  }
+}
